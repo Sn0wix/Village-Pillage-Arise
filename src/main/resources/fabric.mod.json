@@ -3,14 +3,14 @@
   "id": "villageandpillage",
   "version": "1.0",
   "name": "Village and Pillage v2",
-  "description": "Village and Pillage v2 is an update of the official Minecraft update called Village and Pillage Update - 1.14",
+  "description": "Village and Pillage v2 is an unofficial update of the official Minecraft update called Village and Pillage Update - 1.14",
   "authors": [
     "Sn0wix_"
   ],
   "contact": {
     "homepage": "https://github.com/Sn0wix",
-    "sources": "https://github.com/Sn0wix",
-    "issues": "https://github.com/Sn0wix"
+    "sources": "https://github.com/Sn0wix/Village-and-Pillage-v2",
+    "issues": "https://github.com/Sn0wix/Village-and-Pillage-v2/issues"
   },
 
   "license": "MIT License",
