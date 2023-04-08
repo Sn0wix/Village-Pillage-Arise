@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "villageandpillage:item/stone_battle_axe"
+  }
+}

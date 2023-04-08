@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "n n",
+    "cnc",
+    "ncn"
+  ],
+  "key": {
+    "n": {
+      "item": "minecraft:gold_nugget"
+    },
+    "c": {
+      "item": "villageandpillage:golden_chain"
+    }
+  },
+  "result": {
+    "item": "villageandpillage:golden_chainmail_chestplate"
+  }
+}

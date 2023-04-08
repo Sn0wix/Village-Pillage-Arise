@@ -1,0 +1,24 @@
+{
+  "item.villageandpillage.sweet_berries_cookie": "Sweet Berries Cookie",
+  "item.villageandpillage.citrine_shard": "Citrine Shard",
+
+  "item.villageandpillage.wooden_battle_axe": "Wooden Battle Axe",
+  "item.villageandpillage.stone_battle_axe": "Stone Battle Axe",
+  "item.villageandpillage.golden_battle_axe": "Golden Battle Axe",
+  "item.villageandpillage.iron_battle_axe": "Iron Battle Axe",
+  "item.villageandpillage.diamond_battle_axe": "Diamond Battle Axe",
+  "item.villageandpillage.netherite_battle_axe": "Netherite Battle Axe",
+  "item.villageandpillage.golden_chainmail_helmet": "Golden Chainmail Helmet",
+  "item.villageandpillage.golden_chainmail_chestplate": "Golden Chainmail Chestplate",
+  "item.villageandpillage.golden_chainmail_leggings": "Golden Chainmail Leggings",
+  "item.villageandpillage.golden_chainmail_boots": "Golden Chainmail Boots",
+
+
+  "block.villageandpillage.citrine_block": "Citrine Block",
+  "block.villageandpillage.budding_citrine": "Budding Citrine",
+  "block.villageandpillage.citrine_cluster": "Citrine Cluster",
+  "block.villageandpillage.large_citrine_bud": "Large Citrine Bud",
+  "block.villageandpillage.medium_citrine_bud": "Medium Citrine Bud",
+  "block.villageandpillage.small_citrine_bud": "Small Citrine Bud",
+  "block.villageandpillage.golden_chain": "Golden Chain"
+}

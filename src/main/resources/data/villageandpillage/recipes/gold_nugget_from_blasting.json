@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "villageandpillage:golden_battle_axe"
+    },
+    {
+      "item": "villageandpillage:golden_chain"
+    },
+    {
+      "item": "villageandpillage:golden_chainmail_helmet"
+    },
+    {
+      "item": "villageandpillage:golden_chainmail_chestplate"
+    },
+    {
+      "item": "villageandpillage:golden_chainmail_leggings"
+    }
+  ,
+    {
+      "item": "villageandpillage:golden_chainmail_boots"
+    }
+  ],
+  "result": "minecraft:gold_nugget",
+  "experience": 0.1,
+  "cookingtime": 100
+}
