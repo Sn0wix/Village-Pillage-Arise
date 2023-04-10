@@ -1,8 +1,8 @@
 {
     "parent": "block/block",
     "textures": {
-        "particle": "block/chain",
-        "all": "block/chain"
+        "particle": "villageandpillage:block/golden_chain",
+        "all": "villageandpillage:block/golden_chain"
     },
     "elements": [
         {
