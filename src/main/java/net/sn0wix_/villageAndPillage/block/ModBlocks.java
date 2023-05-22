@@ -10,10 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.sn0wix_.villageAndPillage.block.custom.BuddingCitrineBlock;
-import net.sn0wix_.villageAndPillage.block.custom.CitrineBlock;
-import net.sn0wix_.villageAndPillage.block.custom.CitrineClusterBlock;
-import net.sn0wix_.villageAndPillage.block.custom.GoldenChainBlock;
+import net.sn0wix_.villageAndPillage.block.custom.*;
 
 public class ModBlocks {
     public static final Block CITRINE_BLOCK = registerBlock("citrine_block",
@@ -54,14 +51,18 @@ public class ModBlocks {
 
     private static Block registerBlock(String name, Block block, ItemGroup group){
         registerBlockItem(name,block,group);
-        return Registry.register(Registry.BLOCK, new Identifier(VillageAndPillageMain.MODID, name),block);
+        return Registry.register(Registry.BLOCK, new Identifier(VillageAndPillageMain.MOD_ID, name),block);
     }
 
     private static Item registerBlockItem(String name, Block block, ItemGroup group) {
-        return Registry.register(Registry.ITEM, new Identifier(VillageAndPillageMain.MODID, name), new BlockItem(block, new FabricItemSettings().group(group)));
+        return Registry.register(Registry.ITEM, new Identifier(VillageAndPillageMain.MOD_ID, name), new BlockItem(block, new FabricItemSettings().group(group)));
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
+        return Registry.register(Registry.BLOCK, new Identifier(VillageAndPillageMain.MOD_ID, name), block);
     }
 
     public static void registerModBlocks(){
-        VillageAndPillageMain.LOGGER.info("Registering Mod blocks for " + VillageAndPillageMain.MODID);
+        VillageAndPillageMain.LOGGER.info("Registering Mod blocks for " + VillageAndPillageMain.MOD_ID);
     }
 }

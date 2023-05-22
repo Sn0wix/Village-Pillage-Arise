@@ -9,14 +9,19 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.sn0wix_.villageAndPillage.item.custom.ModMusicDiscItem;
+import net.sn0wix_.villageAndPillage.sounds.ModSounds;
 
 public class ModItems {
+
+    public static final Item CITRINE_SHARD = registerItem("citrine_shard",
+            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
 
     public static final Item SWEET_BERRIES_COOKIE = registerItem("sweet_berries_cookie",
             new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(ModFoodComponents.SWEET_BERRIES_COOKIE)));
 
-    public static final Item CITRINE_SHARD = registerItem("citrine_shard",
-            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
+    public static final Item CORN = registerItem("corn",
+            new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(ModFoodComponents.CORN)));
 
 
 
@@ -53,11 +58,40 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.GOLDEN_CHAINMAIL, EquipmentSlot.FEET,new FabricItemSettings().group(ItemGroup.COMBAT)));
 
 
+
+
+    public static final Item MUSIC_DISC_REVENGE = registerItem("music_disc_revenge",
+            new ModMusicDiscItem(15 , ModSounds.REVENGE, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+
+    public static final Item MUSIC_DISC_GILDED = registerItem("music_disc_gilded",
+            new ModMusicDiscItem(13 , ModSounds.GILDED, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+
+    public static final Item MUSIC_DISC_GUARDIAN = registerItem("music_disc_guardian",
+            new ModMusicDiscItem(12 , ModSounds.GUARDIAN, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+
+    public static final Item MUSIC_DISC_HUSK = registerItem("music_disc_husk",
+            new ModMusicDiscItem(11 , ModSounds.HUSK, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+
+    public static final Item MUSIC_DISC_RAIDERS = registerItem("music_disc_raiders",
+            new ModMusicDiscItem(10 , ModSounds.RAIDERS, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+
+    public static final Item MUSIC_DISC_SHULKER = registerItem("music_disc_shulker",
+            new ModMusicDiscItem(9 , ModSounds.SHULKER, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+
+    public static final Item MUSIC_DISC_THE_ENDER_DRAGON = registerItem("music_disc_the_ender_dragon",
+            new ModMusicDiscItem(8 , ModSounds.THE_ENDER_DRAGON, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+
+    public static final Item MUSIC_DISC_THE_WITHER = registerItem("music_disc_the_wither",
+            new ModMusicDiscItem(7 , ModSounds.THE_WITHER, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+
+
+
+
     private static Item registerItem(String name, Item item){
-        return Registry.register(Registry.ITEM, new Identifier(VillageAndPillageMain.MODID, name),item);
+        return Registry.register(Registry.ITEM, new Identifier(VillageAndPillageMain.MOD_ID, name),item);
     }
 
     public static void registerModItems(){
-        VillageAndPillageMain.LOGGER.info("Registering Mod items for " + VillageAndPillageMain.MODID);
+        VillageAndPillageMain.LOGGER.info("Registering Mod items for " + VillageAndPillageMain.MOD_ID);
     }
 }
