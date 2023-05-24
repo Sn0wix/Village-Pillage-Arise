@@ -2,6 +2,8 @@
   "item.villageandpillage.citrine_shard": "Citrine Shard",
   "item.villageandpillage.sweet_berries_cookie": "Sweet Berries Cookie",
   "item.villageandpillage.corn": "Corn",
+  "item.villageandpillage.corn_seeds": "Corn Seeds",
+  "item.villageandpillage.corn_chowder": "Corn Chowder",
 
 
 
@@ -30,10 +32,16 @@
   "item.villageandpillage.iron_battle_axe": "Iron Battle Axe",
   "item.villageandpillage.diamond_battle_axe": "Diamond Battle Axe",
   "item.villageandpillage.netherite_battle_axe": "Netherite Battle Axe",
+
   "item.villageandpillage.golden_chainmail_helmet": "Golden Chainmail Helmet",
   "item.villageandpillage.golden_chainmail_chestplate": "Golden Chainmail Chestplate",
   "item.villageandpillage.golden_chainmail_leggings": "Golden Chainmail Leggings",
   "item.villageandpillage.golden_chainmail_boots": "Golden Chainmail Boots",
+
+  "item.villageandpillage.shulker_helmet": "Shulker Helmet",
+  "item.villageandpillage.shulker_chestplate": "Shulker Chestplate",
+  "item.villageandpillage.shulker_leggings": "Shulker Leggings",
+  "item.villageandpillage.shulker_boots": "Shulker Boots",
 
 
 
@@ -43,5 +51,6 @@
   "block.villageandpillage.large_citrine_bud": "Large Citrine Bud",
   "block.villageandpillage.medium_citrine_bud": "Medium Citrine Bud",
   "block.villageandpillage.small_citrine_bud": "Small Citrine Bud",
-  "block.villageandpillage.golden_chain": "Golden Chain"
+  "block.villageandpillage.golden_chain": "Golden Chain",
+  "block.villageandpillage.corn_block": "Corn"
 }

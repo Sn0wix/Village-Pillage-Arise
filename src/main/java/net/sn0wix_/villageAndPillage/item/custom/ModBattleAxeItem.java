@@ -19,7 +19,7 @@ public class ModBattleAxeItem extends MiningToolItem implements Vanishable {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        int random = new Random().nextInt(9);
+        int random = new Random().nextInt(15);
 
         if (random == 1){
 

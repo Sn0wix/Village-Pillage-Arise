@@ -2,8 +2,10 @@ package net.sn0wix_.villageAndPillage.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.ArmorItem;
 import net.sn0wix_.villageAndPillage.VillageAndPillageMain;
+import net.sn0wix_.villageAndPillage.block.ModBlocks;
 import net.sn0wix_.villageAndPillage.item.custom.ModBattleAxeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -22,6 +24,12 @@ public class ModItems {
 
     public static final Item CORN = registerItem("corn",
             new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(ModFoodComponents.CORN)));
+
+    public static final Item CORN_SEEDS = registerItem("corn_seeds",
+            new AliasedBlockItem(ModBlocks.CORN_BLOCK ,new FabricItemSettings().group(ItemGroup.FOOD).food(ModFoodComponents.CORN_SEEDS)));
+
+    public static final Item CORN_CHOWDER = registerItem("corn_chowder",
+            new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(ModFoodComponents.CORN_CHOWDER).maxCount(1)));
 
 
 
@@ -56,6 +64,20 @@ public class ModItems {
 
     public static final Item GOLDEN_CHAINMAIL_BOOTS = registerItem("golden_chainmail_boots",
             new ArmorItem(ModArmorMaterials.GOLDEN_CHAINMAIL, EquipmentSlot.FEET,new FabricItemSettings().group(ItemGroup.COMBAT)));
+
+
+
+    public static final Item SHULKER_HELMET = registerItem("shulker_helmet",
+            new ArmorItem(ModArmorMaterials.SHULKER, EquipmentSlot.HEAD,new FabricItemSettings().group(ItemGroup.COMBAT)));
+
+    public static final Item SHULKER_CHESTPLATE = registerItem("shulker_chestplate",
+            new ArmorItem(ModArmorMaterials.SHULKER, EquipmentSlot.CHEST,new FabricItemSettings().group(ItemGroup.COMBAT)));
+
+    public static final Item SHULKER_LEGGINGS = registerItem("shulker_leggings",
+            new ArmorItem(ModArmorMaterials.SHULKER, EquipmentSlot.LEGS,new FabricItemSettings().group(ItemGroup.COMBAT)));
+
+    public static final Item SHULKER_BOOTS = registerItem("shulker_boots",
+            new ArmorItem(ModArmorMaterials.SHULKER, EquipmentSlot.FEET,new FabricItemSettings().group(ItemGroup.COMBAT)));
 
 
 

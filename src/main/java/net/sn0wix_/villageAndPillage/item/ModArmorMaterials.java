@@ -11,8 +11,12 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    GOLDEN_CHAINMAIL("golden_chainmail", 6, new int[]{1, 3, 4, 1}, 14, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN,
-            0.0F, 0.0F, () -> Ingredient.ofItems(Items.IRON_INGOT));
+    GOLDEN_CHAINMAIL("golden_chainmail", 6, new int[]{1, 3, 4, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN,
+            0.0F, 0.0F, () -> Ingredient.ofItems(Items.GOLD_INGOT)),
+
+    SHULKER("shulker", 10, new int[]{2, 4, 5, 2}, 20, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+            1.8F, 0.0F, () -> Ingredient.ofItems(Items.SHULKER_SHELL));
+
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     private final String name;

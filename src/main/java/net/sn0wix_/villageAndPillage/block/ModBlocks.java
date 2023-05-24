@@ -47,6 +47,9 @@ public class ModBlocks {
             new GoldenChainBlock(FabricBlockSettings.of(Material.METAL).requiresTool().nonOpaque()
                     .strength(4.8F, 5.8F).sounds(BlockSoundGroup.CHAIN)), ItemGroup.BUILDING_BLOCKS);
 
+    public static final Block CORN_BLOCK = registerBlockWithoutBlockItem("corn_block",
+            new CornBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque().noCollision().breakInstantly()));
+
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group){

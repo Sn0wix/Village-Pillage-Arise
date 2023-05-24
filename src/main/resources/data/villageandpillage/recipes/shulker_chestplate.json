@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "s s",
+    "sss",
+    "sss"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:shulker_shell"
+    }
+  },
+  "result": {
+    "item": "villageandpillage:shulker_chestplate"
+  }
+}
