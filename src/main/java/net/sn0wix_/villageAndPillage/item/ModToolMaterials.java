@@ -14,14 +14,21 @@ public enum ModToolMaterials implements ToolMaterial {
 
     BATTLE_AXE_STONE(0, 131, 2.0F, 0.0F, 5, () -> Ingredient.fromTag(ItemTags.STONE_TOOL_MATERIALS)),
 
-    BATTLE_AXE_IRON(1, 250, 4.0F, 0.0F, 14, () -> Ingredient.ofItems(Items.IRON_INGOT)),
+    BATTLE_AXE_IRON(1, 250, 3.0F, 0.0F, 14, () -> Ingredient.ofItems(Items.IRON_INGOT)),
 
-    BATTLE_AXE_DIAMOND(1, 1561, 4.0F, 0.0F, 10, () -> Ingredient.ofItems(Items.DIAMOND)),
+    BATTLE_AXE_DIAMOND(1, 1561, 3.0F, 0.0F, 10, () -> Ingredient.ofItems(Items.DIAMOND)),
 
-    BATTLE_AXE_GOLD(0, 32, 2.0F, 0.0F, 22, () -> Ingredient.ofItems(Items.GOLD_INGOT)),
+    BATTLE_AXE_GOLD(0, 32, 4.0F, 0.0F, 22, () -> Ingredient.ofItems(Items.GOLD_INGOT)),
 
-    BATTLE_AXE_NETHERITE(1, 2031, 4.0F, 0.0F, 15, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
+    BATTLE_AXE_NETHERITE(1, 2031, 3.0F, 0.0F, 15, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
 
+    LAPIS_LAZULI(4, 2031, 9.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
+
+    LAPIS_LAZULI_BATTLE_AXE(1, 2031, 3.0F, 0.0F, 30, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
+
+    REDSTONE(4, 2031, 9.0F, 4.0F, 10, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
+
+    REDSTONE_BATTLE_AXE(1, 2031, 3.0F, 0.0F, 10, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
 
 
     private final int miningLevel;

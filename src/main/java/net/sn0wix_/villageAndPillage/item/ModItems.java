@@ -2,16 +2,12 @@ package net.sn0wix_.villageAndPillage.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.AliasedBlockItem;
-import net.minecraft.item.ArmorItem;
+import net.minecraft.item.*;
 import net.sn0wix_.villageAndPillage.VillageAndPillageMain;
 import net.sn0wix_.villageAndPillage.block.ModBlocks;
-import net.sn0wix_.villageAndPillage.item.custom.ModBattleAxeItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.sn0wix_.villageAndPillage.item.custom.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.sn0wix_.villageAndPillage.item.custom.ModMusicDiscItem;
 import net.sn0wix_.villageAndPillage.sounds.ModSounds;
 
 public class ModItems {
@@ -67,18 +63,67 @@ public class ModItems {
 
 
 
-    public static final Item SHULKER_HELMET = registerItem("shulker_helmet",
-            new ArmorItem(ModArmorMaterials.SHULKER, EquipmentSlot.HEAD,new FabricItemSettings().group(ItemGroup.COMBAT)));
+    public static final Item LAPIS_LAZULI_HELMET = registerItem("lapis_lazuli_helmet",
+            new LapisLazuliArmorItem(ModArmorMaterials.LAPIS_LAZULI, EquipmentSlot.HEAD ,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
 
-    public static final Item SHULKER_CHESTPLATE = registerItem("shulker_chestplate",
-            new ArmorItem(ModArmorMaterials.SHULKER, EquipmentSlot.CHEST,new FabricItemSettings().group(ItemGroup.COMBAT)));
+    public static final Item LAPIS_LAZULI_CHESTPLATE = registerItem("lapis_lazuli_chestplate",
+            new LapisLazuliArmorItem(ModArmorMaterials.LAPIS_LAZULI, EquipmentSlot.CHEST ,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
 
-    public static final Item SHULKER_LEGGINGS = registerItem("shulker_leggings",
-            new ArmorItem(ModArmorMaterials.SHULKER, EquipmentSlot.LEGS,new FabricItemSettings().group(ItemGroup.COMBAT)));
+    public static final Item LAPIS_LAZULI_LEGGINGS = registerItem("lapis_lazuli_leggings",
+            new LapisLazuliArmorItem(ModArmorMaterials.LAPIS_LAZULI, EquipmentSlot.LEGS ,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
 
-    public static final Item SHULKER_BOOTS = registerItem("shulker_boots",
-            new ArmorItem(ModArmorMaterials.SHULKER, EquipmentSlot.FEET,new FabricItemSettings().group(ItemGroup.COMBAT)));
+    public static final Item LAPIS_LAZULI_BOOTS = registerItem("lapis_lazuli_boots",
+            new LapisLazuliArmorItem(ModArmorMaterials.LAPIS_LAZULI, EquipmentSlot.FEET ,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
 
+    public static final Item LAPIS_LAZULI_SWORD = registerItem("lapis_lazuli_sword",
+            new SwordItem(ModToolMaterials.LAPIS_LAZULI,3,-2.4f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
+
+    public static final Item LAPIS_LAZULI_BATTLE_AXE = registerItem("lapis_lazuli_battle_axe",
+            new ModBattleAxeItem(ModToolMaterials.LAPIS_LAZULI_BATTLE_AXE,14f,-3.3f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
+
+    public static final Item LAPIS_LAZULI_AXE = registerItem("lapis_lazuli_axe",
+            new RedstoneAxeItem(ModToolMaterials.LAPIS_LAZULI,5.0f,-3.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+
+    public static final Item LAPIS_LAZULI_PICKAXE = registerItem("lapis_lazuli_pickaxe",
+            new RedstonePickaxeItem(ModToolMaterials.LAPIS_LAZULI,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+
+    public static final Item LAPIS_LAZULI_SHOVEL = registerItem("lapis_lazuli_shovel",
+            new ShovelItem(ModToolMaterials.LAPIS_LAZULI,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+
+    public static final Item LAPIS_LAZULI_HOE = registerItem("lapis_lazuli_hoe",
+            new RedstoneHoeItem(ModToolMaterials.LAPIS_LAZULI,-4,0.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+
+
+
+    public static final Item REDSTONE_HELMET = registerItem("redstone_helmet",
+            new RedstoneArmorItem(ModArmorMaterials.REDSTONE, EquipmentSlot.HEAD,new FabricItemSettings().group(ItemGroup.COMBAT)));
+
+    public static final Item REDSTONE_CHESTPLATE = registerItem("redstone_chestplate",
+            new RedstoneArmorItem(ModArmorMaterials.REDSTONE, EquipmentSlot.CHEST,new FabricItemSettings().group(ItemGroup.COMBAT)));
+
+    public static final Item REDSTONE_LEGGINGS = registerItem("redstone_leggings",
+            new RedstoneArmorItem(ModArmorMaterials.REDSTONE, EquipmentSlot.LEGS,new FabricItemSettings().group(ItemGroup.COMBAT)));
+
+    public static final Item REDSTONE_BOOTS = registerItem("redstone_boots",
+            new RedstoneArmorItem(ModArmorMaterials.REDSTONE, EquipmentSlot.FEET,new FabricItemSettings().group(ItemGroup.COMBAT)));
+
+    public static final Item REDSTONE_SWORD = registerItem("redstone_sword",
+            new SwordItem(ModToolMaterials.REDSTONE,3,-2.4f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
+
+    public static final Item REDSTONE_BATTLE_AXE = registerItem("redstone_battle_axe",
+            new ModBattleAxeItem(ModToolMaterials.REDSTONE_BATTLE_AXE,14f,-3.3f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
+
+    public static final Item REDSTONE_AXE = registerItem("redstone_axe",
+            new RedstoneAxeItem(ModToolMaterials.REDSTONE,5.0f,-3.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+
+    public static final Item REDSTONE_PICKAXE = registerItem("redstone_pickaxe",
+            new RedstonePickaxeItem(ModToolMaterials.REDSTONE,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+
+    public static final Item REDSTONE_SHOVEL = registerItem("redstone_shovel",
+            new ShovelItem(ModToolMaterials.REDSTONE,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+
+    public static final Item REDSTONE_HOE = registerItem("redstone_hoe",
+            new RedstoneHoeItem(ModToolMaterials.REDSTONE,-4,0.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
 
 
 

@@ -14,8 +14,11 @@ public enum ModArmorMaterials implements ArmorMaterial {
     GOLDEN_CHAINMAIL("golden_chainmail", 6, new int[]{1, 3, 4, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN,
             0.0F, 0.0F, () -> Ingredient.ofItems(Items.GOLD_INGOT)),
 
-    SHULKER("shulker", 10, new int[]{2, 4, 5, 2}, 20, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
-            1.8F, 0.0F, () -> Ingredient.ofItems(Items.SHULKER_SHELL));
+    LAPIS_LAZULI("lapis_lazuli", 37, new int[]{3, 6, 8, 3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
+            3.0F, 0.1F, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
+
+    REDSTONE("redstone", 37, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
+            3.0F, 0.1F, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
 
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};

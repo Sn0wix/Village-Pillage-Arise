@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "villageandpillage:item/netherite_battle_axe"
+    "layer0": "villageandpillage:item/redstone_battle_axe"
   }
 }
