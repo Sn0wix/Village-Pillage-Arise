@@ -1,0 +1,66 @@
+{
+  "revenge": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:revenge",
+        "stream": true
+      }
+    ]
+  },
+  "gilded": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:gilded",
+        "stream": true
+      }
+    ]
+  },
+  "guardian": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:guardian",
+        "stream": true
+      }
+    ]
+  },
+  "husk": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:husk",
+        "stream": true
+      }
+    ]
+  },
+  "raiders": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:raiders",
+        "stream": true
+      }
+    ]
+  },
+  "shulker": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:shulker",
+        "stream": true
+      }
+    ]
+  },
+  "the_ender_dragon": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:the_ender_dragon",
+        "stream": true
+      }
+    ]
+  },
+  "the_wither": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:the_wither",
+        "stream": true
+      }
+    ]
+  }
+}

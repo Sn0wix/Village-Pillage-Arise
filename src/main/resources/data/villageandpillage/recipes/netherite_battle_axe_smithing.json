@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "villageandpillage:diamond_battle_axe"
+    "item": "villagepillagearise:diamond_battle_axe"
   },
   "addition": {
     "item": "minecraft:netherite_ingot"
   },
   "result": {
-    "item": "villageandpillage:netherite_battle_axe"
+    "item": "villagepillagearise:netherite_battle_axe"
   }
 }

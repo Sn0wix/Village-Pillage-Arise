@@ -2,23 +2,23 @@
   "type": "minecraft:blasting",
   "ingredient": [
     {
-      "item": "villageandpillage:golden_battle_axe"
+      "item": "villagepillagearise:golden_battle_axe"
     },
     {
-      "item": "villageandpillage:golden_chain"
+      "item": "villagepillagearise:golden_chain"
     },
     {
-      "item": "villageandpillage:golden_chainmail_helmet"
+      "item": "villagepillagearise:golden_chainmail_helmet"
     },
     {
-      "item": "villageandpillage:golden_chainmail_chestplate"
+      "item": "villagepillagearise:golden_chainmail_chestplate"
     },
     {
-      "item": "villageandpillage:golden_chainmail_leggings"
+      "item": "villagepillagearise:golden_chainmail_leggings"
     }
   ,
     {
-      "item": "villageandpillage:golden_chainmail_boots"
+      "item": "villagepillagearise:golden_chainmail_boots"
     }
   ],
   "result": "minecraft:gold_nugget",

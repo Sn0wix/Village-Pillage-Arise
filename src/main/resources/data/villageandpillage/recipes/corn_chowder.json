@@ -6,7 +6,7 @@
   ],
   "key": {
     "s": {
-      "item": "villageandpillage:corn_seeds"
+      "item": "villagepillagearise:corn_seeds"
     },
     "b": {
       "item": "minecraft:bowl"
@@ -19,6 +19,6 @@
     }
   },
   "result": {
-    "item": "villageandpillage:corn_chowder"
+    "item": "villagepillagearise:corn_chowder"
   }
 }

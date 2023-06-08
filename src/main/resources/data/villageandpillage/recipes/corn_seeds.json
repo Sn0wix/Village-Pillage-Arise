@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "villageandpillage:corn"
+      "item": "villagepillagearise:corn"
     }
   ],
   "result": {
-    "item": "villageandpillage:corn_seeds",
+    "item": "villagepillagearise:corn_seeds",
     "count": 2
   }
 }

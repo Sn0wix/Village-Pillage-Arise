@@ -6,11 +6,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "villageandpillage:corn",
+          "name": "villagepillagearise:corn",
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "villageandpillage:corn_block",
+              "block": "villagepillagearise:corn_block",
               "properties": {
                 "age": "7"
               }
@@ -34,13 +34,13 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "villageandpillage:corn_seeds",
+          "name": "villagepillagearise:corn_seeds",
           "conditions": [
             {
               "condition": "minecraft:inverted",
               "term": {
                 "condition": "minecraft:block_state_property",
-                "block": "villageandpillage:corn_block",
+                "block": "villagepillagearise:corn_block",
                 "properties": {
                   "age": "7"
                 }

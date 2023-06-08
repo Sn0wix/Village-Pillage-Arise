@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-    "villageandpillage:golden_chain",
-    "villageandpillage:citrine_block",
-    "villageandpillage:budding_citrine",
-    "villageandpillage:citrine_cluster",
-    "villageandpillage:large_citrine_bud",
-    "villageandpillage:medium_citrine_bud",
-    "villageandpillage:small_citrine_bud"
+    "villagepillagearise:golden_chain",
+    "villagepillagearise:citrine_block",
+    "villagepillagearise:budding_citrine",
+    "villagepillagearise:citrine_cluster",
+    "villagepillagearise:large_citrine_bud",
+    "villagepillagearise:medium_citrine_bud",
+    "villagepillagearise:small_citrine_bud"
   ]
 }

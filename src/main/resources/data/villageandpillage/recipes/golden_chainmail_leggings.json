@@ -10,10 +10,10 @@
       "item": "minecraft:gold_nugget"
     },
     "c": {
-      "item": "villageandpillage:golden_chain"
+      "item": "villagepillagearise:golden_chain"
     }
   },
   "result": {
-    "item": "villageandpillage:golden_chainmail_leggings"
+    "item": "villagepillagearise:golden_chainmail_leggings"
   }
 }

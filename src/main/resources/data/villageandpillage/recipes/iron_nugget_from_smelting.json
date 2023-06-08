@@ -2,7 +2,7 @@
   "type": "minecraft:smelting",
   "ingredient": [
     {
-      "item": "villageandpillage:iron_battle_axe"
+      "item": "villagepillagearise:iron_battle_axe"
     },
     {
       "item": "minecraft:chain"

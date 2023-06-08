@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "villagepillagearise:item/golden_chainmail_chestplate"
+  }
+}
