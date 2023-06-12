@@ -1,4 +1,4 @@
-package net.sn0wix_.villagePillageArise.item.custom;
+package net.sn0wix_.villagePillageArise.item.custom.lapisLazuli;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;

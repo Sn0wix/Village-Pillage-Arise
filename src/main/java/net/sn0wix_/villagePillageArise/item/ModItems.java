@@ -8,6 +8,8 @@ import net.sn0wix_.villagePillageArise.block.ModBlocks;
 import net.sn0wix_.villagePillageArise.item.custom.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.sn0wix_.villagePillageArise.item.custom.lapisLazuli.*;
+import net.sn0wix_.villagePillageArise.item.custom.redstone.*;
 import net.sn0wix_.villagePillageArise.sounds.ModSounds;
 
 public class ModItems {
@@ -76,22 +78,22 @@ public class ModItems {
             new LapisLazuliArmorItem(ModArmorMaterials.LAPIS_LAZULI, EquipmentSlot.FEET ,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
 
     public static final Item LAPIS_LAZULI_SWORD = registerItem("lapis_lazuli_sword",
-            new SwordItem(ModToolMaterials.LAPIS_LAZULI,3,-2.4f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
+            new LapisLazuliSwordItem(ModToolMaterials.LAPIS_LAZULI,3,-2.4f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
 
     public static final Item LAPIS_LAZULI_BATTLE_AXE = registerItem("lapis_lazuli_battle_axe",
-            new ModBattleAxeItem(ModToolMaterials.LAPIS_LAZULI_BATTLE_AXE,14f,-3.3f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
+            new LapisLazuliBattleAxeItem(ModToolMaterials.LAPIS_LAZULI_BATTLE_AXE,14f,-3.3f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
 
     public static final Item LAPIS_LAZULI_AXE = registerItem("lapis_lazuli_axe",
-            new RedstoneAxeItem(ModToolMaterials.LAPIS_LAZULI,5.0f,-3.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+            new LapisLazuliAxeItem(ModToolMaterials.LAPIS_LAZULI,5.0f,-3.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
 
     public static final Item LAPIS_LAZULI_PICKAXE = registerItem("lapis_lazuli_pickaxe",
-            new RedstonePickaxeItem(ModToolMaterials.LAPIS_LAZULI,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+            new LapisLazuliPickaxeItem(ModToolMaterials.LAPIS_LAZULI,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
 
     public static final Item LAPIS_LAZULI_SHOVEL = registerItem("lapis_lazuli_shovel",
-            new ShovelItem(ModToolMaterials.LAPIS_LAZULI,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+            new LapisLazuliShovelItem(ModToolMaterials.LAPIS_LAZULI,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
 
     public static final Item LAPIS_LAZULI_HOE = registerItem("lapis_lazuli_hoe",
-            new RedstoneHoeItem(ModToolMaterials.LAPIS_LAZULI,-4,0.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+            new LapisLazuliHoeItem(ModToolMaterials.LAPIS_LAZULI,-4,0.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
 
 
 
@@ -108,7 +110,7 @@ public class ModItems {
             new RedstoneArmorItem(ModArmorMaterials.REDSTONE, EquipmentSlot.FEET,new FabricItemSettings().group(ItemGroup.COMBAT)));
 
     public static final Item REDSTONE_SWORD = registerItem("redstone_sword",
-            new SwordItem(ModToolMaterials.REDSTONE,3,-2.4f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
+            new RedstoneSwordItem(ModToolMaterials.REDSTONE,3,-2.4f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
 
     public static final Item REDSTONE_BATTLE_AXE = registerItem("redstone_battle_axe",
             new ModBattleAxeItem(ModToolMaterials.REDSTONE_BATTLE_AXE,14f,-3.3f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
@@ -120,7 +122,7 @@ public class ModItems {
             new RedstonePickaxeItem(ModToolMaterials.REDSTONE,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
 
     public static final Item REDSTONE_SHOVEL = registerItem("redstone_shovel",
-            new ShovelItem(ModToolMaterials.REDSTONE,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+            new RedstoneShovelItem(ModToolMaterials.REDSTONE,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
 
     public static final Item REDSTONE_HOE = registerItem("redstone_hoe",
             new RedstoneHoeItem(ModToolMaterials.REDSTONE,-4,0.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));

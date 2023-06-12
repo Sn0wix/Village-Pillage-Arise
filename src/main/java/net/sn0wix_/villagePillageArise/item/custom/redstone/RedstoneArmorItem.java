@@ -1,4 +1,4 @@
-package net.sn0wix_.villagePillageArise.item.custom;
+package net.sn0wix_.villagePillageArise.item.custom.redstone;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
