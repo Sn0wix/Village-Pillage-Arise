@@ -16,11 +16,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(EnchantmentScreenHandler.class)
 public abstract class LapisArmorEnchantMixin {
+
     @Shadow @Final private Inventory inventory;
 
-    @Inject(method = "onButtonClick", at = @At(value = "INVOKE",
-            target = "Lnet/minecraft/screen/EnchantmentScreenHandler;decrement(I)VLnet/minecraft/item/ItemStack;", ordinal = 0))
-    private void injectOnButtonClicked(PlayerEntity player, int id, CallbackInfoReturnable infoReturnable){
+    @Inject(method = "*onButtonClick", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;decrement(I)V"))
+    private void injectOnButtonClicked(PlayerEntity player, int id, CallbackInfoReturnable<Boolean> cir){
         ItemStack lapis_equipment = this.inventory.getStack(0);
         ItemStack lapis_lazuli = this.inventory.getStack(1);
 
@@ -28,7 +28,7 @@ public abstract class LapisArmorEnchantMixin {
             lapis_lazuli.increment(id + 1);
             int mendingChance = (int) (Math.random() * 100);
 
-            if (mendingChance <= 30 && lapis_equipment.getEnchantments().contains(Enchantments.MENDING)){
+            if (mendingChance <= 30 && !lapis_equipment.getEnchantments().contains(Enchantments.MENDING)){
                 lapis_equipment.addEnchantment(Enchantments.MENDING, 1);
             }
         }
