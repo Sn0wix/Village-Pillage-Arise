@@ -19,7 +19,7 @@ public abstract class LapisArmorEnchantMixin {
 
     @Shadow @Final private Inventory inventory;
 
-    @Inject(method = "*onButtonClick", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;decrement(I)V"))
+    /*@Inject(method = "*onButtonClick", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;decrement(I)V"))
     private void injectOnButtonClicked(PlayerEntity player, int id, CallbackInfoReturnable<Boolean> cir){
         ItemStack lapis_equipment = this.inventory.getStack(0);
         ItemStack lapis_lazuli = this.inventory.getStack(1);
@@ -32,7 +32,7 @@ public abstract class LapisArmorEnchantMixin {
                 lapis_equipment.addEnchantment(Enchantments.MENDING, 1);
             }
         }
-    }
+    }*/
 
     public boolean isValidItem(ItemStack itemStack){
         Item item = itemStack.getItem();

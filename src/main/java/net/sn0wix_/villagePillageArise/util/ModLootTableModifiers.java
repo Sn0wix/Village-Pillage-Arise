@@ -1,9 +1,9 @@
 package net.sn0wix_.villagePillageArise.util;
 
-import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
+import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.EntityPropertiesLootCondition;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.context.LootContext;
@@ -29,73 +29,73 @@ public class ModLootTableModifiers {
 
 
     public static void modifyLootTables(){
-        LootTableLoadingCallback.EVENT.register((((resourceManager, manager, id, supplier, setter) -> {
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             if (PIGLIN_BRUTE_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(0.1f, ModItems.MUSIC_DISC_GILDED).build());
+                tableBuilder.pool(createLootPoolBuilder(0.1f, ModItems.MUSIC_DISC_GILDED).build());
             }
 
             if (ELDER_GUARDIAN_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(0.15f, ModItems.MUSIC_DISC_GUARDIAN).build());
+                tableBuilder.pool(createLootPoolBuilder(0.15f, ModItems.MUSIC_DISC_GUARDIAN).build());
             }
 
             if (HUSK_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(0.05f, ModItems.MUSIC_DISC_HUSK).build());
+                tableBuilder.pool(createLootPoolBuilder(0.05f, ModItems.MUSIC_DISC_HUSK).build());
             }
 
             if (WITHER_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(1f, ModItems.MUSIC_DISC_THE_WITHER).build());
+                tableBuilder.pool(createLootPoolBuilder(1f, ModItems.MUSIC_DISC_THE_WITHER).build());
             }
 
             if (PILLAGER_OUTPOST_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(0.5f, ModItems.MUSIC_DISC_RAIDERS).build());
+                tableBuilder.pool(createLootPoolBuilder(0.5f, ModItems.MUSIC_DISC_RAIDERS).build());
             }
 
             if (END_CITY_TREASURE_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(0.07f, ModItems.MUSIC_DISC_SHULKER).build());
-                supplier.withPool(createLootPoolBuilder(0.01f, ModItems.MUSIC_DISC_THE_ENDER_DRAGON).build());
+                tableBuilder.pool(createLootPoolBuilder(0.07f, ModItems.MUSIC_DISC_SHULKER).build());
+                tableBuilder.pool(createLootPoolBuilder(0.01f, ModItems.MUSIC_DISC_THE_ENDER_DRAGON).build());
             }
 
             if (CREEPER_ID.equals(id)){
-                FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.KILLER, new EntityPredicate.Builder().type(EntityType.CREEPER)))
                         .with(ItemEntry.builder(ModItems.MUSIC_DISC_REVENGE));
-                supplier.withPool(poolBuilder.build());
+                tableBuilder.pool(poolBuilder.build());
             }
 
             if (VILLAGE_PLAINS_HOUSE_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(0.20f, ModItems.CORN).build());
-                supplier.withPool(createLootPoolBuilder(0.15f, ModItems.CORN_SEEDS).build());
+                tableBuilder.pool(createLootPoolBuilder(0.20f, ModItems.CORN).build());
+                tableBuilder.pool(createLootPoolBuilder(0.15f, ModItems.CORN_SEEDS).build());
             }
 
             if (VILLAGE_SAVANNA_HOUSE_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(0.1f, ModItems.CORN).build());
-                supplier.withPool(createLootPoolBuilder(0.08f, ModItems.CORN_SEEDS).build());
+                tableBuilder.pool(createLootPoolBuilder(0.1f, ModItems.CORN).build());
+                tableBuilder.pool(createLootPoolBuilder(0.08f, ModItems.CORN_SEEDS).build());
             }
 
             if (SHIPWRECK_SUPPLY_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(0.4f, ModItems.CORN).build());
+                tableBuilder.pool(createLootPoolBuilder(0.4f, ModItems.CORN).build());
             }
 
             if (VILLAGE_PLAINS_HOUSE_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(0.3f, ModItems.CORN).build());
-                supplier.withPool(createLootPoolBuilder(0.1f, ModItems.CORN_SEEDS).build());
+                tableBuilder.pool(createLootPoolBuilder(0.3f, ModItems.CORN).build());
+                tableBuilder.pool(createLootPoolBuilder(0.1f, ModItems.CORN_SEEDS).build());
             }
 
             if (WOODLAND_MANSION_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(0.15f, ModItems.CORN).build());
-                supplier.withPool(createLootPoolBuilder(0.1f, ModItems.CORN_SEEDS).build());
+                tableBuilder.pool(createLootPoolBuilder(0.15f, ModItems.CORN).build());
+                tableBuilder.pool(createLootPoolBuilder(0.1f, ModItems.CORN_SEEDS).build());
             }
 
             if (ABANDONED_MINESHAFT_ID.equals(id)){
-                supplier.withPool(createLootPoolBuilder(0.17f, ModItems.CORN).build());
-                supplier.withPool(createLootPoolBuilder(0.20f, ModItems.CORN_SEEDS).build());
+                tableBuilder.pool(createLootPoolBuilder(0.17f, ModItems.CORN).build());
+                tableBuilder.pool(createLootPoolBuilder(0.20f, ModItems.CORN_SEEDS).build());
             }
-        })));
+        });
     }
 
-    private static FabricLootPoolBuilder createLootPoolBuilder(float chance, Item item){
-        FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
+    private static LootPool.Builder createLootPoolBuilder(float chance, Item item){
+        LootPool.Builder poolBuilder = LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(1))
                 .conditionally(RandomChanceLootCondition.builder(chance))
                 .with(ItemEntry.builder(item));

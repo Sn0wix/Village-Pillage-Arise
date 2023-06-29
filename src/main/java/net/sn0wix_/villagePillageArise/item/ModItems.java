@@ -130,28 +130,28 @@ public class ModItems {
 
 
     public static final Item MUSIC_DISC_REVENGE = registerItem("music_disc_revenge",
-            new ModMusicDiscItem(15 , ModSounds.REVENGE, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+            new ModMusicDiscItem(15 , ModSounds.REVENGE, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 218));
 
     public static final Item MUSIC_DISC_GILDED = registerItem("music_disc_gilded",
-            new ModMusicDiscItem(13 , ModSounds.GILDED, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+            new ModMusicDiscItem(13 , ModSounds.GILDED, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 130));
 
     public static final Item MUSIC_DISC_GUARDIAN = registerItem("music_disc_guardian",
-            new ModMusicDiscItem(12 , ModSounds.GUARDIAN, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+            new ModMusicDiscItem(12 , ModSounds.GUARDIAN, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 140));
 
     public static final Item MUSIC_DISC_HUSK = registerItem("music_disc_husk",
-            new ModMusicDiscItem(11 , ModSounds.HUSK, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+            new ModMusicDiscItem(11 , ModSounds.HUSK, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 127));
 
     public static final Item MUSIC_DISC_RAIDERS = registerItem("music_disc_raiders",
-            new ModMusicDiscItem(10 , ModSounds.RAIDERS, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+            new ModMusicDiscItem(10 , ModSounds.RAIDERS, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 181));
 
     public static final Item MUSIC_DISC_SHULKER = registerItem("music_disc_shulker",
-            new ModMusicDiscItem(9 , ModSounds.SHULKER, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+            new ModMusicDiscItem(9 , ModSounds.SHULKER, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 185));
 
     public static final Item MUSIC_DISC_THE_ENDER_DRAGON = registerItem("music_disc_the_ender_dragon",
-            new ModMusicDiscItem(8 , ModSounds.THE_ENDER_DRAGON, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+            new ModMusicDiscItem(8 , ModSounds.THE_ENDER_DRAGON, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 230));
 
     public static final Item MUSIC_DISC_THE_WITHER = registerItem("music_disc_the_wither",
-            new ModMusicDiscItem(7 , ModSounds.THE_WITHER, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1)));
+            new ModMusicDiscItem(7 , ModSounds.THE_WITHER, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 203));
 
 
 

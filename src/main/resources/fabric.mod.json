@@ -30,9 +30,9 @@
     "villagepillagearise.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.14.21",
     "fabric": "*",
-    "minecraft": "~1.18.1",
+    "minecraft": "~1.19.2",
     "java": ">=17"
   },
   "suggests": {

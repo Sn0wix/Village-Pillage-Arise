@@ -1,19 +1,19 @@
 package net.sn0wix_.villagePillageArise.painting;
 
-import net.minecraft.entity.decoration.painting.PaintingMotive;
+import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.sn0wix_.villagePillageArise.VillagePillageAriseMain;
 
 public class ModPainting {
-    public static final PaintingMotive EARTH = registerPainting("earth", new PaintingMotive(32,32));
-    public static final PaintingMotive FIRE = registerPainting("fire", new PaintingMotive(32,32));
-    public static final PaintingMotive WATER = registerPainting("water", new PaintingMotive(32,32));
-    public static final PaintingMotive WIND = registerPainting("wind", new PaintingMotive(32,32));
-    public static final PaintingMotive CAMP_FIRE = registerPainting("camp_fire", new PaintingMotive(16,32));
+    public static final PaintingVariant EARTH = registerPainting("earth", new PaintingVariant(32,32));
+    public static final PaintingVariant FIRE = registerPainting("fire", new PaintingVariant(32,32));
+    public static final PaintingVariant WATER = registerPainting("water", new PaintingVariant(32,32));
+    public static final PaintingVariant WIND = registerPainting("wind", new PaintingVariant(32,32));
+    public static final PaintingVariant CAMP_FIRE = registerPainting("camp_fire", new PaintingVariant(16,32));
 
-    private static PaintingMotive registerPainting(String name, PaintingMotive paintingMotive){
-        return Registry.register(Registry.PAINTING_MOTIVE, new Identifier(VillagePillageAriseMain.MOD_ID, name), paintingMotive);
+    private static PaintingVariant registerPainting(String name, PaintingVariant paintingMotive){
+        return Registry.register(Registry.PAINTING_VARIANT, new Identifier(VillagePillageAriseMain.MOD_ID, name), paintingMotive);
     }
 
     public static void registerPaintings(){
