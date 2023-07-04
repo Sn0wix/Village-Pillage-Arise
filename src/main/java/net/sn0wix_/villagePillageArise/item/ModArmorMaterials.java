@@ -14,10 +14,10 @@ public enum ModArmorMaterials implements ArmorMaterial {
     GOLDEN_CHAINMAIL("golden_chainmail", 6, new int[]{1, 3, 4, 1}, 22, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN,
             0.0F, 0.0F, () -> Ingredient.ofItems(Items.GOLD_INGOT)),
 
-    LAPIS_LAZULI("lapis_lazuli", 37, new int[]{3, 6, 8, 3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
+    LAPIS_LAZULI("lapis_lazuli", 37, new int[]{3, 6, 8, 3}, 50, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
             3.0F, 0.1F, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
 
-    REDSTONE("redstone", 37, new int[]{3, 6, 8, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
+    REDSTONE("redstone", 37, new int[]{3, 6, 8, 3}, 1, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE,
             3.0F, 0.1F, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
 
 

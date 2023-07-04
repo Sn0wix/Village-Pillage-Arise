@@ -1,13 +1,13 @@
 {
-  "item.villagepillagearise.citrine_shard": "Citrine Shard",
-  "item.villagepillagearise.mythril_ingot": "Mythril Ingot",
+  "item.villagepillagearise.redstone_equipment.tooltip.charged": "§4Charged",
+  "item.villagepillagearise.redstone_equipment.tooltip.discharged": "§8Discharged",
 
+  "item.villagepillagearise.citrine_shard": "Citrine Shard",
 
   "item.villagepillagearise.sweet_berries_cookie": "Sweet Berries Cookie",
   "item.villagepillagearise.corn": "Corn",
   "item.villagepillagearise.corn_seeds": "Corn Seeds",
   "item.villagepillagearise.corn_chowder": "Corn Chowder",
-
 
 
   "item.villagepillagearise.music_disc_revenge": "§bMusic Disc",
@@ -26,6 +26,14 @@
   "item.villagepillagearise.music_disc_the_ender_dragon.desc": "T_en_M - The Ender Dragon",
   "item.villagepillagearise.music_disc_the_wither": "§bMusic Disc",
   "item.villagepillagearise.music_disc_the_wither.desc": "T_en_M - The Wither",
+  "item.villagepillagearise.music_disc_brute": "§bMusic Disc",
+  "item.villagepillagearise.music_disc_brute.desc": "T_en_M - Brute",
+  "item.villagepillagearise.music_disc_shrieker": "§bMusic Disc",
+  "item.villagepillagearise.music_disc_shrieker.desc": "T_en_M - Shrieker",
+  "item.villagepillagearise.music_disc_shrieker_x_brute": "§bMusic Disc",
+  "item.villagepillagearise.music_disc_shrieker_x_brute.desc": "T_en_M - Shrieker X Brute",
+  "item.villagepillagearise.music_disc_warden_run": "§bMusic Disc",
+  "item.villagepillagearise.music_disc_warden_run.desc": "T_en_M - Warden Run",
 
 
 

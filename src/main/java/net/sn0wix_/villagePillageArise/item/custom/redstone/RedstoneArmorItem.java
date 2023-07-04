@@ -20,34 +20,43 @@ public class RedstoneArmorItem extends ArmorItem {
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (world.isClient)return;
+        if (world.isClient) return;
 
         BlockPos blockPos = new BlockPos(entity.getPos().getX(), entity.getPos().getY() - 1f, entity.getZ());
 
-        if (isValidBlock(world.getBlockState(blockPos).getBlock()) && hasValidArmorOn(entity)){
-//works
+        if (isValidBlock(world.getBlockState(blockPos).getBlock()) && hasCorrectArmorOn(entity)) {
+            if (stack.getItem().equals(ModItems.REDSTONE_HELMET)){
+                stack.getOrCreateNbt().putBoolean("charged", true);
+            }
+        }
+        if (!hasCorrectArmorOn(entity) && stack.getItem().equals(ModItems.REDSTONE_HELMET)){
+            stack.getOrCreateNbt().putBoolean("charged", false);
         }
     }
 
-    public boolean hasValidArmorOn(Entity entity){
-        if (!(entity instanceof LivingEntity))return false;
+
+    public boolean hasCorrectArmorOn(Entity entity) {
+        if (!(entity instanceof LivingEntity livingEntity)) return false;
         boolean passed = true;
 
-        entity.getArmorItems().forEach(itemStack -> {
-            Item item = itemStack.getItem();
-            if (!isValidArmorItem(item)){
-                boolean passed2 = false;
-                passed2 = passed;
-            }
-        });
+        if (!isValidArmorItem(livingEntity.getEquippedStack(EquipmentSlot.HEAD).getItem())) {
+            passed = false;
+        } else if (!isValidArmorItem(livingEntity.getEquippedStack(EquipmentSlot.CHEST).getItem())) {
+            passed = false;
+        } else if (!isValidArmorItem(livingEntity.getEquippedStack(EquipmentSlot.LEGS).getItem())) {
+            passed = false;
+        } else if (!isValidArmorItem(livingEntity.getEquippedStack(EquipmentSlot.FEET).getItem())){
+            passed = false;
+        }
+
         return passed;
     }
 
-    private boolean isValidArmorItem(Item item){
-        return  item == ModItems.REDSTONE_HELMET || item == ModItems.REDSTONE_CHESTPLATE || item == ModItems.REDSTONE_LEGGINGS || item == ModItems.REDSTONE_BOOTS;
+    private boolean isValidArmorItem(Item item) {
+        return item == ModItems.REDSTONE_HELMET || item == ModItems.REDSTONE_CHESTPLATE || item == ModItems.REDSTONE_LEGGINGS || item == ModItems.REDSTONE_BOOTS;
     }
 
-    private boolean isValidBlock(Block block){
+    private boolean isValidBlock(Block block) {
         return block == Blocks.REDSTONE_BLOCK || block == Blocks.REDSTONE_ORE || block == Blocks.DEEPSLATE_REDSTONE_ORE;
     }
 }

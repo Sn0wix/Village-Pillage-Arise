@@ -62,5 +62,37 @@
         "stream": true
       }
     ]
+  },
+  "brute": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:brute",
+        "stream": true
+      }
+    ]
+  },
+  "shrieker": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:shrieker",
+        "stream": true
+      }
+    ]
+  },
+  "shrieker_x_brute": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:shrieker_x_brute",
+        "stream": true
+      }
+    ]
+  },
+  "warden_run": {
+    "sounds": [
+      {
+        "name": "villagepillagearise:warden_run",
+        "stream": true
+      }
+    ]
   }
 }

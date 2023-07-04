@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "villagepillagearise:music_disc_shrieker"
+  },
+  "addition": {
+    "item": "villagepillagearise:music_disc_brute"
+  },
+  "result": {
+    "item": "villagepillagearise:music_disc_shrieker_x_brute"
+  }
+}

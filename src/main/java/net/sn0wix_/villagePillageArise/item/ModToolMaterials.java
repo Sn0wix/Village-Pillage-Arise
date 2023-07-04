@@ -22,13 +22,13 @@ public enum ModToolMaterials implements ToolMaterial {
 
     BATTLE_AXE_NETHERITE(1, 2031, 3.0F, 0.0F, 15, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
 
-    LAPIS_LAZULI(4, 2031, 9.0F, 4.0F, 30, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
+    LAPIS_LAZULI(4, 2031, 9.0F, 4.0F, 50, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
 
-    LAPIS_LAZULI_BATTLE_AXE(1, 2031, 3.0F, 0.0F, 30, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
+    LAPIS_LAZULI_BATTLE_AXE(1, 2031, 3.0F, 0.0F, 50, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
 
-    REDSTONE(4, 2031, 9.0F, 4.0F, 10, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
+    REDSTONE(4, 2031, 9.0F, 4.0F, 1, () -> Ingredient.ofItems(Items.NETHERITE_INGOT)),
 
-    REDSTONE_BATTLE_AXE(1, 2031, 3.0F, 0.0F, 10, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
+    REDSTONE_BATTLE_AXE(1, 2031, 3.0F, 0.0F, 1, () -> Ingredient.ofItems(Items.NETHERITE_INGOT));
 
 
     private final int miningLevel;

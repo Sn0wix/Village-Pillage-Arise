@@ -113,7 +113,7 @@ public class ModItems {
             new RedstoneSwordItem(ModToolMaterials.REDSTONE,3,-2.4f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
 
     public static final Item REDSTONE_BATTLE_AXE = registerItem("redstone_battle_axe",
-            new ModBattleAxeItem(ModToolMaterials.REDSTONE_BATTLE_AXE,14f,-3.3f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
+            new RedstoneBattleAxeItem(ModToolMaterials.REDSTONE_BATTLE_AXE,14f,-3.3f,new FabricItemSettings().fireproof().group(ItemGroup.COMBAT)));
 
     public static final Item REDSTONE_AXE = registerItem("redstone_axe",
             new RedstoneAxeItem(ModToolMaterials.REDSTONE,5.0f,-3.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
@@ -148,10 +148,22 @@ public class ModItems {
             new ModMusicDiscItem(9 , ModSounds.SHULKER, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 185));
 
     public static final Item MUSIC_DISC_THE_ENDER_DRAGON = registerItem("music_disc_the_ender_dragon",
-            new ModMusicDiscItem(8 , ModSounds.THE_ENDER_DRAGON, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 230));
+            new ModMusicDiscItem(8 , ModSounds.THE_ENDER_DRAGON, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 170));
 
     public static final Item MUSIC_DISC_THE_WITHER = registerItem("music_disc_the_wither",
-            new ModMusicDiscItem(7 , ModSounds.THE_WITHER, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 203));
+            new ModMusicDiscItem(7 , ModSounds.THE_WITHER, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 143));
+
+    public static final Item MUSIC_DISC_BRUTE = registerItem("music_disc_brute",
+            new ModMusicDiscItem(6 , ModSounds.BRUTE, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 92));
+
+    public static final Item MUSIC_DISC_SHRIEKER = registerItem("music_disc_shrieker",
+            new ModMusicDiscItem(5 , ModSounds.SHRIEKER, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 122));
+
+    public static final Item MUSIC_DISC_SHRIEKER_X_BRUTE = registerItem("music_disc_shrieker_x_brute",
+            new ModMusicDiscItem(4 , ModSounds.SHRIEKER_X_BRUTE, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 123));
+
+    public static final Item MUSIC_DISC_WARDEN_RUN = registerItem("music_disc_warden_run",
+            new ModMusicDiscItem(3 , ModSounds.WARDEN_RUN, new FabricItemSettings().group(ItemGroup.MISC).maxCount(1), 181));
 
 
 

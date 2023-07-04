@@ -19,6 +19,10 @@ public class ModLootTableModifiers {
     private static final Identifier ELDER_GUARDIAN_ID = new Identifier("minecraft", "entities/elder_guardian");
     private static final Identifier HUSK_ID = new Identifier("minecraft", "entities/husk");
     private static final Identifier WITHER_ID = new Identifier("minecraft", "entities/wither");
+    private static final Identifier WARDEN_ID = new Identifier("minecraft", "entities/warden");
+    private static final Identifier ANCIENT_CITY_ID = new Identifier("minecraft", "chests/ancient_city");
+    private static final Identifier BASTION_TREASURE_ID = new Identifier("minecraft", "chests/bastion_treasure");
+    private static final Identifier BASTION_OTHER_ID = new Identifier("minecraft", "chests/bastion_other");
     private static final Identifier PILLAGER_OUTPOST_ID = new Identifier("minecraft", "chests/pillager_outpost");
     private static final Identifier END_CITY_TREASURE_ID = new Identifier("minecraft", "chests/end_city_treasure");
     private static final Identifier VILLAGE_SAVANNA_HOUSE_ID = new Identifier("minecraft", "chests/village/village_savanna_house");
@@ -28,34 +32,10 @@ public class ModLootTableModifiers {
     private static final Identifier ABANDONED_MINESHAFT_ID = new Identifier("minecraft", "chests/abandoned_mineshaft");
 
 
-    public static void modifyLootTables(){
+    public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if (PIGLIN_BRUTE_ID.equals(id)){
-                tableBuilder.pool(createLootPoolBuilder(0.1f, ModItems.MUSIC_DISC_GILDED).build());
-            }
 
-            if (ELDER_GUARDIAN_ID.equals(id)){
-                tableBuilder.pool(createLootPoolBuilder(0.15f, ModItems.MUSIC_DISC_GUARDIAN).build());
-            }
-
-            if (HUSK_ID.equals(id)){
-                tableBuilder.pool(createLootPoolBuilder(0.05f, ModItems.MUSIC_DISC_HUSK).build());
-            }
-
-            if (WITHER_ID.equals(id)){
-                tableBuilder.pool(createLootPoolBuilder(1f, ModItems.MUSIC_DISC_THE_WITHER).build());
-            }
-
-            if (PILLAGER_OUTPOST_ID.equals(id)){
-                tableBuilder.pool(createLootPoolBuilder(0.5f, ModItems.MUSIC_DISC_RAIDERS).build());
-            }
-
-            if (END_CITY_TREASURE_ID.equals(id)){
-                tableBuilder.pool(createLootPoolBuilder(0.07f, ModItems.MUSIC_DISC_SHULKER).build());
-                tableBuilder.pool(createLootPoolBuilder(0.01f, ModItems.MUSIC_DISC_THE_ENDER_DRAGON).build());
-            }
-
-            if (CREEPER_ID.equals(id)){
+            if (CREEPER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(EntityPropertiesLootCondition.builder(LootContext.EntityTarget.KILLER, new EntityPredicate.Builder().type(EntityType.CREEPER)))
@@ -63,38 +43,81 @@ public class ModLootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if (VILLAGE_PLAINS_HOUSE_ID.equals(id)){
+            if (PIGLIN_BRUTE_ID.equals(id)) {
+                tableBuilder.pool(createLootPoolBuilder(0.1f, ModItems.MUSIC_DISC_BRUTE).build());
+            }
+
+            if (ELDER_GUARDIAN_ID.equals(id)) {
+                tableBuilder.pool(createLootPoolBuilder(0.15f, ModItems.MUSIC_DISC_GUARDIAN).build());
+            }
+
+            if (HUSK_ID.equals(id)) {
+                tableBuilder.pool(createLootPoolBuilder(0.05f, ModItems.MUSIC_DISC_HUSK).build());
+            }
+
+            if (WITHER_ID.equals(id)) {
+                tableBuilder.pool(createLootPoolBuilder(1f, ModItems.MUSIC_DISC_THE_WITHER).build());
+            }
+
+            if (WARDEN_ID.equals(id)) {
+                tableBuilder.pool(createLootPoolBuilder(0.5f, ModItems.MUSIC_DISC_WARDEN_RUN).build());
+            }
+
+
+            if (ANCIENT_CITY_ID.equals(id)) {
+                tableBuilder.pool(createLootPoolBuilder(0.15f, ModItems.MUSIC_DISC_SHRIEKER).build());
+            }
+
+            if (BASTION_TREASURE_ID.equals(id)) {
+                tableBuilder.pool(createLootPoolBuilder(0.35f, ModItems.MUSIC_DISC_GILDED).build());
+            }
+
+            if (BASTION_OTHER_ID.equals(id)) {
+                tableBuilder.pool(createLootPoolBuilder(0.06f, ModItems.MUSIC_DISC_GILDED).build());
+            }
+
+            if (PILLAGER_OUTPOST_ID.equals(id)) {
+                tableBuilder.pool(createLootPoolBuilder(0.5f, ModItems.MUSIC_DISC_RAIDERS).build());
+            }
+
+            if (END_CITY_TREASURE_ID.equals(id)) {
+                tableBuilder.pool(createLootPoolBuilder(0.07f, ModItems.MUSIC_DISC_SHULKER).build());
+                tableBuilder.pool(createLootPoolBuilder(0.01f, ModItems.MUSIC_DISC_THE_ENDER_DRAGON).build());
+            }
+
+            if (VILLAGE_PLAINS_HOUSE_ID.equals(id)) {
                 tableBuilder.pool(createLootPoolBuilder(0.20f, ModItems.CORN).build());
                 tableBuilder.pool(createLootPoolBuilder(0.15f, ModItems.CORN_SEEDS).build());
             }
 
-            if (VILLAGE_SAVANNA_HOUSE_ID.equals(id)){
+            if (VILLAGE_SAVANNA_HOUSE_ID.equals(id)) {
                 tableBuilder.pool(createLootPoolBuilder(0.1f, ModItems.CORN).build());
                 tableBuilder.pool(createLootPoolBuilder(0.08f, ModItems.CORN_SEEDS).build());
             }
 
-            if (SHIPWRECK_SUPPLY_ID.equals(id)){
+            if (SHIPWRECK_SUPPLY_ID.equals(id)) {
                 tableBuilder.pool(createLootPoolBuilder(0.4f, ModItems.CORN).build());
             }
 
-            if (VILLAGE_PLAINS_HOUSE_ID.equals(id)){
+            if (VILLAGE_PLAINS_HOUSE_ID.equals(id)) {
                 tableBuilder.pool(createLootPoolBuilder(0.3f, ModItems.CORN).build());
                 tableBuilder.pool(createLootPoolBuilder(0.1f, ModItems.CORN_SEEDS).build());
             }
 
-            if (WOODLAND_MANSION_ID.equals(id)){
+            if (WOODLAND_MANSION_ID.equals(id)) {
                 tableBuilder.pool(createLootPoolBuilder(0.15f, ModItems.CORN).build());
                 tableBuilder.pool(createLootPoolBuilder(0.1f, ModItems.CORN_SEEDS).build());
+                tableBuilder.pool(createLootPoolBuilder(0.08f, ModItems.MUSIC_DISC_RAIDERS).build());
             }
 
-            if (ABANDONED_MINESHAFT_ID.equals(id)){
+            if (ABANDONED_MINESHAFT_ID.equals(id)) {
                 tableBuilder.pool(createLootPoolBuilder(0.17f, ModItems.CORN).build());
                 tableBuilder.pool(createLootPoolBuilder(0.20f, ModItems.CORN_SEEDS).build());
             }
         });
     }
 
-    private static LootPool.Builder createLootPoolBuilder(float chance, Item item){
+    private static LootPool.Builder createLootPoolBuilder(float chance, Item item) {
         LootPool.Builder poolBuilder = LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(1))
                 .conditionally(RandomChanceLootCondition.builder(chance))

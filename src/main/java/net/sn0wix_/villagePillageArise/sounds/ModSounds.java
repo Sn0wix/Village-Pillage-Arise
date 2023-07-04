@@ -14,6 +14,10 @@ public class ModSounds {
     public static SoundEvent SHULKER = registerSoundEvent("shulker");
     public static SoundEvent THE_ENDER_DRAGON = registerSoundEvent("the_ender_dragon");
     public static SoundEvent THE_WITHER = registerSoundEvent("the_wither");
+    public static SoundEvent BRUTE = registerSoundEvent("brute");
+    public static SoundEvent SHRIEKER = registerSoundEvent("shrieker");
+    public static SoundEvent SHRIEKER_X_BRUTE = registerSoundEvent("shrieker_x_brute");
+    public static SoundEvent WARDEN_RUN = registerSoundEvent("warden_run");
 
 
     private static SoundEvent registerSoundEvent(String name) {
