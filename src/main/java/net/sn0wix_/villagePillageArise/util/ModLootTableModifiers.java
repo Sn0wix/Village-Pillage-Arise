@@ -3,13 +3,17 @@ package net.sn0wix_.villagePillageArise.util;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.EntityPropertiesLootCondition;
+import net.minecraft.loot.condition.LootCondition;
+import net.minecraft.loot.condition.MatchToolLootCondition;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.predicate.entity.EntityPredicate;
+import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.util.Identifier;
 import net.sn0wix_.villagePillageArise.item.ModItems;
 
@@ -30,6 +34,10 @@ public class ModLootTableModifiers {
     private static final Identifier WOODLAND_MANSION_ID = new Identifier("minecraft", "chests/woodland_mansion");
     private static final Identifier SHIPWRECK_SUPPLY_ID = new Identifier("minecraft", "chests/shipwreck_supply");
     private static final Identifier ABANDONED_MINESHAFT_ID = new Identifier("minecraft", "chests/abandoned_mineshaft");
+    private static final Identifier LAPIS_ORE_ID = new Identifier("minecraft", "blocks/lapis_ore");
+    private static final Identifier DEEPSLATE_LAPIS_ORE_ID = new Identifier("minecraft", "blocks/deepslate_lapis_ore");
+    private static final Identifier REDSTONE_ORE_ID = new Identifier("minecraft", "blocks/redstone_ore");
+    private static final Identifier DEEPSLATE_REDSTONE_ORE_ID = new Identifier("minecraft", "blocks/deepslate_redstone_ore");
 
 
     public static void modifyLootTables() {
@@ -113,6 +121,42 @@ public class ModLootTableModifiers {
             if (ABANDONED_MINESHAFT_ID.equals(id)) {
                 tableBuilder.pool(createLootPoolBuilder(0.17f, ModItems.CORN).build());
                 tableBuilder.pool(createLootPoolBuilder(0.20f, ModItems.CORN_SEEDS).build());
+            }
+
+            if (LAPIS_ORE_ID.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.005f))
+                        .conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(Items.NETHERITE_PICKAXE)))
+                        .with(ItemEntry.builder(ModItems.LAPIS_SHARD));
+                tableBuilder.pool(poolBuilder).build();
+            }
+
+            if (DEEPSLATE_LAPIS_ORE_ID.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.005f))
+                        .conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(Items.NETHERITE_PICKAXE)))
+                        .with(ItemEntry.builder(ModItems.LAPIS_SHARD));
+                tableBuilder.pool(poolBuilder).build();
+            }
+
+            if (REDSTONE_ORE_ID.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.005f))
+                        .conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(Items.NETHERITE_PICKAXE)))
+                        .with(ItemEntry.builder(ModItems.REDSTONE_SHARD));
+                tableBuilder.pool(poolBuilder).build();
+            }
+
+            if (DEEPSLATE_REDSTONE_ORE_ID.equals(id)){
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.005f))
+                        .conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(Items.NETHERITE_PICKAXE)))
+                        .with(ItemEntry.builder(ModItems.REDSTONE_SHARD));
+                tableBuilder.pool(poolBuilder).build();
             }
         });
     }

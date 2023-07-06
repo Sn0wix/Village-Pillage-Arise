@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "rnr",
+    "nhn",
+    "rnr"
+  ],
+  "key": {
+    "r": {
+      "item": "villagepillagearise:lapis_shard"
+    },
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "h": {
+      "item": "minecraft:netherite_chestplate"
+    }
+  },
+  "result": {
+    "item": "villagepillagearise:lapis_lazuli_chestplate"
+  }
+}

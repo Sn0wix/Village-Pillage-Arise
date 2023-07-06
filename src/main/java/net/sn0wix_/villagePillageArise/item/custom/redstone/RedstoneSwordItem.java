@@ -12,8 +12,6 @@ import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.particle.DustParticleEffect;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -36,14 +34,12 @@ public class RedstoneSwordItem extends SwordItem {
             double chanceB = Math.random() * 100;
             int chance = (int) chanceB;
 
-            target.damage(DamageSource.GENERIC, 16);
+            target.damage(DamageSource.GENERIC, 10);
 
             if (charged < chance){
                 stack.getOrCreateNbt().putInt("Charged", stack.getOrCreateNbt().getInt("Charged") + 1);
             }else {
                 stack.getOrCreateNbt().putInt("Charged", 0);
-                attacker.getWorld().playSound(attacker.getX(), attacker.getY(), attacker.getZ(), SoundEvents.ENTITY_ITEM_BREAK,
-                        SoundCategory.PLAYERS, 4f, 1f, true);
             }
         }
 
@@ -64,8 +60,6 @@ public class RedstoneSwordItem extends SwordItem {
                 stack.getOrCreateNbt().putInt("Charged", stack.getOrCreateNbt().getInt("Charged") + 1);
             }else {
                 stack.getOrCreateNbt().putInt("Charged", 0);
-                miner.getWorld().playSound(miner.getX(), miner.getY(), miner.getZ(), SoundEvents.ENTITY_ITEM_BREAK,
-                        SoundCategory.PLAYERS, 16f, 1f, false);
             }
         }
 

@@ -10,6 +10,10 @@ public class ModModelPredicateProvider {
     public static void registerModules(){
         registerRedstoneTools(ModItems.REDSTONE_SWORD);
         registerRedstoneTools(ModItems.REDSTONE_BATTLE_AXE);
+        registerRedstoneTools(ModItems.REDSTONE_PICKAXE);
+        registerRedstoneTools(ModItems.REDSTONE_SHOVEL);
+        registerRedstoneTools(ModItems.REDSTONE_HOE);
+        registerRedstoneTools(ModItems.REDSTONE_AXE);
     }
 
     public static void registerRedstoneTools(Item item){

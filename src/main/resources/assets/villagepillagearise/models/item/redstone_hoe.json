@@ -1,6 +1,16 @@
 {
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "villagepillagearise:item/redstone_hoe"
-  }
+  "overrides": [
+    {
+      "predicate": {
+        "charged": 0
+      },
+      "model": "villagepillagearise:item/redstone_hoe_discharged"
+    },
+    {
+      "predicate": {
+        "charged": 1
+      },
+      "model": "villagepillagearise:item/redstone_hoe_charged"
+    }
+  ]
 }

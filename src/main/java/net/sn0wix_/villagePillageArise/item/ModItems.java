@@ -17,6 +17,12 @@ public class ModItems {
     public static final Item CITRINE_SHARD = registerItem("citrine_shard",
             new Item(new FabricItemSettings().group(ItemGroup.MISC)));
 
+    public static final Item LAPIS_SHARD = registerItem("lapis_shard",
+            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
+
+    public static final Item REDSTONE_SHARD = registerItem("redstone_shard",
+            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
+
     public static final Item SWEET_BERRIES_COOKIE = registerItem("sweet_berries_cookie",
             new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(ModFoodComponents.SWEET_BERRIES_COOKIE)));
 
@@ -90,11 +96,10 @@ public class ModItems {
             new LapisLazuliPickaxeItem(ModToolMaterials.LAPIS_LAZULI,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
 
     public static final Item LAPIS_LAZULI_SHOVEL = registerItem("lapis_lazuli_shovel",
-            new LapisLazuliShovelItem(ModToolMaterials.LAPIS_LAZULI,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+            new LapisLazuliShovelItem(ModToolMaterials.LAPIS_LAZULI,1.5f,-3f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
 
     public static final Item LAPIS_LAZULI_HOE = registerItem("lapis_lazuli_hoe",
             new LapisLazuliHoeItem(ModToolMaterials.LAPIS_LAZULI,-4,0.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
-
 
 
     public static final Item REDSTONE_HELMET = registerItem("redstone_helmet",
@@ -122,7 +127,7 @@ public class ModItems {
             new RedstonePickaxeItem(ModToolMaterials.REDSTONE,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
 
     public static final Item REDSTONE_SHOVEL = registerItem("redstone_shovel",
-            new RedstoneShovelItem(ModToolMaterials.REDSTONE,1,-2.8f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
+            new RedstoneShovelItem(ModToolMaterials.REDSTONE,1.5f,-3f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));
 
     public static final Item REDSTONE_HOE = registerItem("redstone_hoe",
             new RedstoneHoeItem(ModToolMaterials.REDSTONE,-4,0.0f,new FabricItemSettings().fireproof().group(ItemGroup.TOOLS)));

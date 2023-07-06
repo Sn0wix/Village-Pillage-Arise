@@ -7,7 +7,8 @@
   ],
   "client": [
     "ExampleMixin",
-    "LapisArmorEnchantMixin"
+    "LapisArmorEnchantMixin",
+    "RedstoneArmorThornsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

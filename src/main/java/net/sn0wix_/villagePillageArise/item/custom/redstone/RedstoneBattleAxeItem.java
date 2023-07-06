@@ -11,8 +11,6 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.particle.DustParticleEffect;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -52,14 +50,12 @@ public class RedstoneBattleAxeItem extends MiningToolItem implements Vanishable 
             double chanceB = Math.random() * 100;
             int chance = (int) chanceB;
 
-            target.damage(DamageSource.GENERIC, 16);
+            target.damage(DamageSource.MAGIC, 16);
 
             if (charged < chance){
                 stack.getOrCreateNbt().putInt("Charged", stack.getOrCreateNbt().getInt("Charged") + 1);
             }else {
                 stack.getOrCreateNbt().putInt("Charged", 0);
-                attacker.getWorld().playSound(attacker.getX(), attacker.getY(), attacker.getZ(), SoundEvents.ENTITY_ITEM_BREAK,
-                        SoundCategory.PLAYERS, 16f, 1f, false);
             }
         }
         return true;
@@ -84,8 +80,6 @@ public class RedstoneBattleAxeItem extends MiningToolItem implements Vanishable 
                 stack.getOrCreateNbt().putInt("Charged", stack.getOrCreateNbt().getInt("Charged") + 1);
             }else {
                 stack.getOrCreateNbt().putInt("Charged", 0);
-                miner.getWorld().playSound(miner.getX(), miner.getY(), miner.getZ(), SoundEvents.ENTITY_ITEM_BREAK,
-                        SoundCategory.PLAYERS, 16f, 1f, false);
             }
         }
         return true;
