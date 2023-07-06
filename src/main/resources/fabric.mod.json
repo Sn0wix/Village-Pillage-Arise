@@ -16,7 +16,7 @@
   },
 
   "license": "MIT License",
-  "icon": "assets/VillagePillageArise/icon.png",
+  "icon": "assets/villagepillagearise/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
